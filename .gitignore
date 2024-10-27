@@ -1,3 +1,7 @@
 client/study-bank/node_modules/*
 client/study-bank/node_modules/
 client/study-bank/node_modules
+
+server/node_modules/
+server/node_modules*
+server/node_modules/*
