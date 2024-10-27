@@ -1,5 +1,6 @@
 import React from "react";
 import "./middlepart.css";
+import FeatureCard from "@/components/feature-card/FeatureCard";
 
 type Props = {};
 
@@ -50,7 +51,7 @@ const MiddlePart = (props: Props) => {
           <hr
             className="w-screen"
             style={{
-              width: "60rem",
+              width: "80rem",
               height: "1px",
               marginTop: "12px",
               backgroundColor: "gray",
@@ -66,6 +67,8 @@ const MiddlePart = (props: Props) => {
               A few features....
             </h3>
           </center>
+          <br />
+          <FeatureCard />
         </div>
       </div>
     </>
