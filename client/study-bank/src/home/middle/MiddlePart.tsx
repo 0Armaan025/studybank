@@ -1,10 +1,19 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import "./middlepart.css";
 import FeatureCard from "@/components/feature-card/FeatureCard";
 
 type Props = {};
 
 const MiddlePart = (props: Props) => {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) return null;
+
   return (
     <>
       <div
@@ -51,7 +60,7 @@ const MiddlePart = (props: Props) => {
           <hr
             className="w-screen"
             style={{
-              width: "80rem",
+              width: "70rem",
               height: "1px",
               marginTop: "12px",
               backgroundColor: "gray",

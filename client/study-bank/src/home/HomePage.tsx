@@ -1,3 +1,4 @@
+"use client";
 import Navbar from "@/components/nav/Navbar";
 import React from "react";
 import MiddlePart from "./middle/MiddlePart";
