@@ -2,8 +2,9 @@
 .middlePart {
   display: flex;
   justify-content: center;
+  scroll-behavior: smooth;
   align-items: start;
-  height: 100vh;
+  /* height: 900vh; */
 }
 
 .centerBtns {

@@ -1,8 +1,11 @@
 "use client";
+import { Parallax } from "react-parallax";
 import React, { useEffect, useState } from "react";
 import "./middlepart.css";
 import IMAGE_1 from "../../../public/image1.jpg";
+import IMAGE_2 from "../../../public/image2.jpg";
 import FeatureCard from "@/components/feature-card/FeatureCard";
+import Footer from "@/components/footer/Footer";
 
 type Props = {};
 
@@ -85,6 +88,42 @@ const MiddlePart = (props: Props) => {
             position="right"
             fontSize="2xl"
             imageUrl={IMAGE_1.src}
+          />
+
+          <FeatureCard
+            title="Points into Money..."
+            description="You get points for each session completed, you also get points by completing streaks/quests based on your class and board, and you can convert these points into money!"
+            position="left"
+            fontSize="2xl"
+            imageUrl={IMAGE_2.src}
+          />
+          <FeatureCard
+            title="Your own bank account..."
+            description="You will have your own bank account, that you can use to withdraw or deposit cash or spend on some stuff on the shopping website, you can also transfer the money to your peers, you can also customize your profile."
+            position="right"
+            fontSize="2xl"
+            imageUrl="https://cdn-icons-png.flaticon.com/256/14355/14355942.png"
+          />
+          <FeatureCard
+            title="Leaderboard..."
+            description="Leaderboard showcases the top people (public profile) with the most amount of money in their bank accounts."
+            position="left"
+            fontSize="3xl"
+            imageUrl="https://cdn-icons-png.flaticon.com/256/8799/8799087.png"
+          />
+          <FeatureCard
+            title="Contact Us..."
+            description="You will have your own studycard that you can download and use it to buy things."
+            position="right"
+            fontSize="2xl"
+            imageUrl="https://cdn-icons-png.flaticon.com/256/9769/9769373.png"
+          />
+          <FeatureCard
+            title="Your custom profile...."
+            description="You can customize almost everything in your profile (Your bio, your status, your name, your username, banner, add custom animated pfps, and more custom things!"
+            position="left"
+            fontSize="2xl"
+            imageUrl="https://cdn-icons-png.flaticon.com/256/4825/4825112.png"
           />
         </div>
       </div>

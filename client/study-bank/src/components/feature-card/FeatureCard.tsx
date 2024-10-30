@@ -16,14 +16,6 @@ type Props = {
 const FeatureCard = (props: Props) => {
   const { fontSize = "3xl" } = props;
 
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
-  if (!isMounted) return null;
-
   return (
     <div
       className={`featureCard flex flex-row justify-between items-start mb-20 `}
@@ -34,7 +26,7 @@ const FeatureCard = (props: Props) => {
             <img
               src={props.imageUrl}
               alt="studyImage"
-              className="w-[20rem] rounded-md h-[20rem]"
+              className="w-[18rem] rounded-lg h-[18rem]"
             />
           </div>
           <div className="flex flex-col justify-center items-start ml-32 text-white   mt-8">
@@ -62,7 +54,7 @@ const FeatureCard = (props: Props) => {
             <img
               src={props.imageUrl}
               alt="studyImage"
-              className="w-[20rem] rounded-md h-[20rem]"
+              className="w-[18rem] rounded-lg h-[18rem]"
             />
           </div>
         </>

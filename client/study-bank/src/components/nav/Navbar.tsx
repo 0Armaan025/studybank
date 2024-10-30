@@ -10,7 +10,7 @@ const Navbar = (props: Props) => {
         <img src="./logo.svg" alt="logo" className="w-32 h-16" />
       </div>
       <div
-        className="flex space-x-4 mr-16 text-md cursor-pointer text-white font-[var(--font-helvetica)]"
+        className="flex space-x-4 mr-20 text-md cursor-pointer text-white font-[var(--font-helvetica)]"
         style={{ fontFamily: "var(--font-helvetica)" }}
       >
         <span className="hover:underline hover:decoration-white transition-all">
