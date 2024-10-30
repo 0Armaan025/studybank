@@ -1,19 +1,12 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import "./middlepart.css";
+import IMAGE_1 from "../../../public/image1.jpg";
 import FeatureCard from "@/components/feature-card/FeatureCard";
 
 type Props = {};
 
 const MiddlePart = (props: Props) => {
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
-  if (!isMounted) return null;
-
   return (
     <>
       <div
@@ -77,7 +70,22 @@ const MiddlePart = (props: Props) => {
             </h3>
           </center>
           <br />
-          <FeatureCard />
+          <FeatureCard
+            description="Concentrated pomodoro sessions will help you to focus and continue
+          studying any topic effectively."
+            position="left"
+            fontSize="3xl"
+            title="Study with pomodoro sessions..."
+            imageUrl="https://img.freepik.com/premium-photo/illustration-kids-education-activity_1305298-26481.jpg?ga=GA1.1.1231475806.1729150554&semt=ais_hybrid"
+          />
+
+          <FeatureCard
+            title="AI study progress checker..."
+            description="you will be requested to either upload your study work or score 92%+ on a quiz based on the topic you just did (you can upload a picture/pdf) to get a quiz from or it will ask using AI."
+            position="right"
+            fontSize="2xl"
+            imageUrl={IMAGE_1.src}
+          />
         </div>
       </div>
     </>

@@ -1,34 +1,72 @@
 "use client";
-import React from "react";
-// import font from "";
+import React, { useEffect, useState } from "react";
+
 import localFont from "next/font/local";
 
 const arialFont = localFont({ src: "../../app/fonts/Arial.ttf" });
 
-type Props = {};
+type Props = {
+  position?: string;
+  title: string;
+  description: string;
+  fontSize?: string;
+  imageUrl?: string;
+};
 
 const FeatureCard = (props: Props) => {
+  const { fontSize = "3xl" } = props;
+
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) return null;
+
   return (
-    <div className={`featureCard flex flex-row justify-between items-start `}>
-      <div className="flex flex-col justify-center items-center">
-        <img
-          src="https://img.freepik.com/premium-photo/illustration-kids-education-activity_1305298-26481.jpg?ga=GA1.1.1231475806.1729150554&semt=ais_hybrid"
-          alt="studyImage"
-          className="w-[20rem] rounded-md h-[20rem]"
-        />
-      </div>
-      <div className="flex flex-col justify-center items-start ml-32 text-white   mt-8">
-        <h3 className={`text-4xl ${arialFont.className}`}>
-          Study with pomodoro sessions...
-        </h3>
-        <h4
-          className="w-[38rem] text-3xl font-light mt-4"
-          style={{ fontFamily: "Bellota text" }}
-        >
-          Concentrated pomodoro sessions will help you to focus and continue
-          studying any topic effectively.
-        </h4>
-      </div>
+    <div
+      className={`featureCard flex flex-row justify-between items-start mb-20 `}
+    >
+      {props.position === "left" ? (
+        <>
+          <div className="flex flex-col justify-center items-center">
+            <img
+              src={props.imageUrl}
+              alt="studyImage"
+              className="w-[20rem] rounded-md h-[20rem]"
+            />
+          </div>
+          <div className="flex flex-col justify-center items-start ml-32 text-white   mt-8">
+            <h3 className={`text-4xl ${arialFont.className}`}>{props.title}</h3>
+            <h4
+              className={`w-[38rem] text-${props.fontSize} font-light mt-4`}
+              style={{ fontFamily: "Bellota text" }}
+            >
+              {props.description}
+            </h4>
+          </div>
+        </>
+      ) : (
+        <>
+          <div className="flex flex-col justify-center items-start mb-20 ml-4 text-white   mt-8">
+            <h3 className={`text-4xl ${arialFont.className}`}>{props.title}</h3>
+            <h4
+              className={`w-[38rem] text-${props.fontSize} font-light mt-4`}
+              style={{ fontFamily: "Bellota text" }}
+            >
+              {props.description}
+            </h4>
+          </div>
+          <div className="flex flex-col justify-center items-center">
+            <img
+              src={props.imageUrl}
+              alt="studyImage"
+              className="w-[20rem] rounded-md h-[20rem]"
+            />
+          </div>
+        </>
+      )}
     </div>
   );
 };
