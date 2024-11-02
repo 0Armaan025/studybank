@@ -7,11 +7,12 @@ type Props = {};
 
 const LeaderboardPage = (props: Props) => {
   return (
-    <>
+    <div className="flex flex-col min-h-screen">
       <Navbar />
       <LeaderboardMiddlePart />
-      {/* <Footer/> */}
-    </>
+      <div className="flex-grow"></div>
+      <Footer />
+    </div>
   );
 };
 
