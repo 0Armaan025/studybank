@@ -17,6 +17,7 @@ const StudySessionMiddlePart = (props: Props) => {
         <center>
           <div className="flex flex-col justify-center items-start bg-[#131313] p-4 rounded-md border-2 border-[#5F5F5F]">
             <h3
+            //idk what
               className="text-white text-xl"
               style={{ fontFamily: "Poppins" }}
             >
