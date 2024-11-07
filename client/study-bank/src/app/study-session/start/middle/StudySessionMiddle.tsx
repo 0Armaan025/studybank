@@ -17,7 +17,7 @@ const StudySessionMiddlePart = (props: Props) => {
         <center>
           <div className="flex flex-col justify-center items-start bg-[#131313] p-4 rounded-md border-2 border-[#5F5F5F]">
             <h3
-            //idk what
+              //idk what
               className="text-white text-xl"
               style={{ fontFamily: "Poppins" }}
             >
@@ -37,7 +37,14 @@ const StudySessionMiddlePart = (props: Props) => {
             </h3>
             <input
               type="number"
-              className=" rounded-md mt-2 w-[20rem] bg-white px-4 py-2 "
+              className=" rounded-md mt-2 w-[20rem] bg-white px-3 py-2 "
+            />
+            <br />
+            <input
+              type="button"
+              value="Start!"
+              className="w-full rounded-lg px-4 py-2 text-2xl cursor-pointer hover:bg-red-500 transition-all text-white bg-red-600"
+              style={{ fontFamily: "Irish Grover, cursive" }}
             />
           </div>
         </center>
